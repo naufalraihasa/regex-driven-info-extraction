@@ -18,7 +18,7 @@ The application is built using **Flask** for the backend and is designed as a we
 ## Folder Structure
 
 ```
-regex-app/
+regex-driven-info-extraction/
 ├── app/
 │   ├── models/
 │   │   ├── (Word2Vec models will be stored here)
@@ -83,7 +83,7 @@ Since the Word2Vec model files are too large to push to GitHub, you can download
 Once downloaded, create a folder called `models` inside the `app` directory and place the downloaded model files there:
 
 ```
-TUGAS 1/
+regex-driven-info-extraction/
 ├── app/
 │   ├── models/
 │   │   ├── word2vec-indonesia.model
