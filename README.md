@@ -76,7 +76,7 @@ pip install -r requirements.txt
 
 Since the Word2Vec model files are too large to push to GitHub, you can download the pre-trained models from the following Google Drive link:
 
-- [Download Word2Vec models from Google Drive](https://drive.google.com/your-google-drive-link)
+- [Download Word2Vec models from Google Drive](https://drive.google.com/drive/folders/1WN87_f8bbxMPl7QDQYNLYXxe9j1lvsgN?usp=sharing)
 
 Once downloaded, create a folder called `models` inside the `app` directory and place the downloaded model files there:
 
