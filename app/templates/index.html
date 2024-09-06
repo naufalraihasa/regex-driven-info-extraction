@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Left column: Submit Form and Information -->
+        <div class="left-column">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="input-summary">
+                    <h3>Upload PDF File</h3>
+                    <input type="file" name="pdf" accept=".pdf"><br><br>
+                    
+                    <h3>Or Enter Text Below</h3>
+                    <textarea name="input_text" placeholder="Enter text here..."></textarea><br><br>
+
+                    <button type="submit">Summarize Data</button>
+                    <button type="button" onclick="clearPage()">Clear</button>
+                </div>
+            </form>
+
+            <div class="data-summary">
+                <h2>Information</h2>
+                {% if extracted_info %}
+                    {% for key, values in extracted_info.items() %}
+                        <p><strong>{{ key }}:</strong> {{ values | join(', ') }}</p>
+                    {% endfor %}
+                {% else %}
+                    <p>No extracted information available.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Right column: Full text, Summarization, and Rouge Score -->
+        <div class="right-column">
+            <div class="full-text">
+                <h3>Full Text from Input</h3>
+                <textarea readonly>{{ full_text if full_text else 'No input provided yet' }}</textarea>
+            </div>
+
+            <div class="summary-result">
+                <h3>Summary Result</h3>
+                <textarea readonly>{{ summary if summary else 'Summary will appear here' }}</textarea>
+            </div>
+
+            <div class="rouge-score">
+                <h3>Rouge Score</h3>
+                <p>
+                    {% if rouge %}
+                        {% for key, value in rouge.items() %}
+                            <strong>{{ key }}:</strong> {{ value }}<br>
+                        {% endfor %}
+                    {% else %}
+                        Rouge score will appear here
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to clear the page
+        function clearPage() {
+            window.location.reload();  // Reloads the page to clear all data
+        }
+    </script>
+    
+</body>
+</html>

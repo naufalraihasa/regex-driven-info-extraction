@@ -1,0 +1,128 @@
+body {
+    background: linear-gradient(135deg, #4B79A1, #283E51);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Left column: Submit form and Information */
+.left-column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items closer to the top */
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-summary {
+    margin-bottom: 10px; /* Reduce space after the form */
+}
+
+input[type="file"] {
+    width: 100%; /* Ensure file input spans the entire column */
+}
+
+textarea {
+    width: calc(100% - 30px); /* Adjust width to fit container with padding */
+    height: 150px;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #F7F7F7;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    box-sizing: border-box; /* Ensure padding and borders are included in the element’s width and height */
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Right column: Full Text, Summarization, and Rouge Score */
+.right-column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Full Text */
+.full-text {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Summarization */
+.summary-result {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rouge Score */
+.rouge-score {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #007bff;
+}
+
+p {
+    color: #333;
+}
+
+strong {
+    color: #6f42c1;
+}
