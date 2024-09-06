@@ -1,5 +1,7 @@
 # REGEX-DRIVEN INFORMATION EXTRACTION AND TEXT SUMMARIZATION
 
+![image](https://github.com/user-attachments/assets/cfafbf76-d252-42a6-a2ad-7742c664def1)
+
 ## Project Description
 
 This project focuses on **information extraction using regular expressions (regex)** and **text summarization** with the help of **K-Means clustering**. The application integrates regex-based extraction techniques to efficiently retrieve key information from text and uses a pre-trained **Word2Vec model** to generate text embeddings, which are then clustered and summarized using **K-Means**.
